@@ -39,11 +39,11 @@ namespace Task2
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
 
-            int[] result = Merge_Sort(array);
+            int[] result = Merge_Sort(array, comparer);
 
-            Array.Copy(result, array, 0);
+            Array.Copy(result, array, result.Length);
         }
-        private static int[] Merge_Sort(int[] array)
+        private static int[] Merge_Sort(int[] array, IComparer comparer)
         {
             if (array.Length == 1)
             {
@@ -52,11 +52,13 @@ namespace Task2
 
             int mid_point = array.Length / 2;
 
-            return Merge(Merge_Sort(array.Take(mid_point).ToArray()), Merge_Sort(array.Skip(mid_point).ToArray()));
+            return Merge(Merge_Sort(array.Take(mid_point).ToArray(), comparer), 
+                Merge_Sort(array.Skip(mid_point).ToArray(), comparer), 
+                comparer);
             
         }
 
-        private static int[] Merge(int[] array1, int[] array2)
+        private static int[] Merge(int[] array1, int[] array2, IComparer comparer)
         {
             int a = 0, b = 0;
             int[] merged = new int[array1.Length + array2.Length];
@@ -64,7 +66,7 @@ namespace Task2
             {
                 if (b < array2.Length && a < array1.Length)
                 {
-                    if (array1[a] > array2[b])
+                    if (comparer.Compare(array1[a], array2[b]) > 0)
                         merged[i] = array2[b++];
                     else
                         merged[i] = array1[a++];
