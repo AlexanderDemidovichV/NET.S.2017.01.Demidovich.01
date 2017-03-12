@@ -7,18 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Task2\Task2.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2_Console", "Task2_Console\Task2_Console.csproj", "{9ED9B50D-DF60-4382-88D9-AECB64C91B85}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1", "Task1", "{92B3359F-4227-4005-BE5C-0CA7E3F6DC1C}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\training.assemblies\Task1\animal.dll = ..\..\..\..\Desktop\training.assemblies\Task1\animal.dll
-		..\..\..\..\Desktop\training.assemblies\Task1\cat.cs = ..\..\..\..\Desktop\training.assemblies\Task1\cat.cs
-		..\..\..\..\Desktop\training.assemblies\Task1\cat.netmodule = ..\..\..\..\Desktop\training.assemblies\Task1\cat.netmodule
-		..\..\..\..\Desktop\training.assemblies\Task1\dog.cs = ..\..\..\..\Desktop\training.assemblies\Task1\dog.cs
-		..\..\..\..\Desktop\training.assemblies\Task1\dog.netmodule = ..\..\..\..\Desktop\training.assemblies\Task1\dog.netmodule
-		..\..\..\..\Desktop\training.assemblies\Task1\hunter.cs = ..\..\..\..\Desktop\training.assemblies\Task1\hunter.cs
-		..\..\..\..\Desktop\training.assemblies\Task1\hunter.exe = ..\..\..\..\Desktop\training.assemblies\Task1\hunter.exe
-		..\..\..\..\Desktop\training.assemblies\Task1\keypair.snk = ..\..\..\..\Desktop\training.assemblies\Task1\keypair.snk
-		..\..\..\..\Desktop\training.assemblies\Task1\mouse.cs = ..\..\..\..\Desktop\training.assemblies\Task1\mouse.cs
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Task1\Task1.csproj", "{280DF26E-B584-4740-8867-D66FF9190F77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +23,10 @@ Global
 		{9ED9B50D-DF60-4382-88D9-AECB64C91B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ED9B50D-DF60-4382-88D9-AECB64C91B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ED9B50D-DF60-4382-88D9-AECB64C91B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280DF26E-B584-4740-8867-D66FF9190F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280DF26E-B584-4740-8867-D66FF9190F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280DF26E-B584-4740-8867-D66FF9190F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280DF26E-B584-4740-8867-D66FF9190F77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
