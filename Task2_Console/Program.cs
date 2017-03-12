@@ -26,26 +26,12 @@ namespace Task2_Console
             Test_ComparePerfomingWithLinqOrderByDescending();
         }
 
-        static void Test_FailToPassNullParameters()
-        {
-            try
-            {
-                Sorter.Sort(null, null);
-            }
-            catch
-            {
-                WriteLine("Test FailToPassNullParameters - passed");
-                return;
-            }
-            WriteLine("Test FailToPassNullParameters - failed");
-        }
-
         static void Test_ComparePerfomingWithDefaultArraySortOrderByAscending()
         {
             int[] unsorted_array1 = Make_Random_Array(100);
             int[] unsorted_array2 = (int[])unsorted_array1.Clone();
 
-            unsorted_array1.Sort(CompareOrderByAscending);
+            unsorted_array1.Sort((x,y) => x.CompareTo(y));
             Array.Sort(unsorted_array2);
 
             if (unsorted_array1.SequenceEqual(unsorted_array2))
@@ -66,6 +52,20 @@ namespace Task2_Console
                 WriteLine("Test ComparePerfomingWithDefaultArraySort - passed");
             else
                 WriteLine("Test ComparePerfomingWithDefaultArraySort - failed");
+        }
+
+        static void Test_FailToPassNullParameters()
+        {
+            try
+            {
+                Sorter.Sort(null, null);
+            }
+            catch
+            {
+                WriteLine("Test FailToPassNullParameters - passed");
+                return;
+            }
+            WriteLine("Test FailToPassNullParameters - failed");
         }
 
         #endregion
