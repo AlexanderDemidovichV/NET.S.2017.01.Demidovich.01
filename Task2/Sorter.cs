@@ -27,6 +27,7 @@ namespace Task2
         #endregion
 
         #region Private Methods
+
         /// <summary>
         /// Executes the sort.
         /// </summary>
@@ -35,7 +36,48 @@ namespace Task2
         ///    to use the System.IComparable implementation of each element.</param>
         private static void ExecuteSort(int[] array, IComparer comparer)
         {
-            Array.Sort(array, comparer);
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
+
+            int[] result = Merge_Sort(array);
+
+            Array.Copy(result, array, 0);
+        }
+        private static int[] Merge_Sort(int[] array)
+        {
+            if (array.Length == 1)
+            {
+                return array;
+            }
+
+            int mid_point = array.Length / 2;
+
+            return Merge(Merge_Sort(array.Take(mid_point).ToArray()), Merge_Sort(array.Skip(mid_point).ToArray()));
+            
+        }
+
+        private static int[] Merge(int[] array1, int[] array2)
+        {
+            int a = 0, b = 0;
+            int[] merged = new int[array1.Length + array2.Length];
+            for (int i = 0; i < array1.Length + array2.Length; i++)
+            {
+                if (b < array2.Length && a < array1.Length)
+                {
+                    if (array1[a] > array2[b])
+                        merged[i] = array2[b++];
+                    else
+                        merged[i] = array1[a++];
+                }
+                else
+                {
+                    if (b < array2.Length)
+                        merged[i] = array2[b++];
+                    else
+                        merged[i] = array1[a++];
+                }
+            }
+            return merged;
         }
         #endregion
     }
