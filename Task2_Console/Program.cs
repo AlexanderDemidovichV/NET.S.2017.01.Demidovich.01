@@ -22,16 +22,20 @@ namespace Task2_Console
         static void Main(string[] args)
         {
             Test_FailToPassNullParameters();
-            Test_ComparePerfomingWithDefaultArraySortOrderByAscending();
-            Test_ComparePerfomingWithLinqOrderByDescending();
+            Test_ComparePerformingWithDefaultArraySortOrderByAscending();
+            Test_ComparePerformingWithLinqExpressionOrderByDescending();
         }
 
-        static void Test_ComparePerfomingWithDefaultArraySortOrderByAscending()
+        /// <summary>
+        /// Tests the compare performing with default array sort, order by ascending.
+        /// </summary>
+        static void Test_ComparePerformingWithDefaultArraySortOrderByAscending()
         {
             int[] unsorted_array1 = Make_Random_Array(100);
             int[] unsorted_array2 = (int[])unsorted_array1.Clone();
 
             unsorted_array1.Sort((x,y) => x.CompareTo(y));
+
             Array.Sort(unsorted_array2);
 
             if (unsorted_array1.SequenceEqual(unsorted_array2))
@@ -40,13 +44,17 @@ namespace Task2_Console
                 WriteLine("Test ComparePerfomingWithDefaultArraySort - failed");
         }
 
-        static void Test_ComparePerfomingWithLinqOrderByDescending()
+        /// <summary>
+        /// Tests the compare performing with linq expression, order by descending.
+        /// </summary>
+        static void Test_ComparePerformingWithLinqExpressionOrderByDescending()
         {
             int[] unsorted_array1 = Make_Random_Array(100);
             int[] unsorted_array2 = (int[])unsorted_array1.Clone();
 
-            unsorted_array2 = unsorted_array1.OrderByDescending(i => i).ToArray();
             unsorted_array1.Sort(CompareOrderByDescending);
+
+            unsorted_array2 = unsorted_array1.OrderByDescending(i => i).ToArray();
 
             if (unsorted_array1.SequenceEqual(unsorted_array2))
                 WriteLine("Test ComparePerfomingWithDefaultArraySort - passed");
@@ -54,6 +62,9 @@ namespace Task2_Console
                 WriteLine("Test ComparePerfomingWithDefaultArraySort - failed");
         }
 
+        /// <summary>
+        /// Tests the fail to try pass null parameters.
+        /// </summary>
         static void Test_FailToPassNullParameters()
         {
             try
@@ -91,14 +102,6 @@ namespace Task2_Console
             }
 
             return array;
-        }
-
-        static private void Display_Array(int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                Write($"{array[i]} ");
-            }
         }
 
         #endregion

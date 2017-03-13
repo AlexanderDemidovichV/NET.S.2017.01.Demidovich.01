@@ -67,7 +67,7 @@ namespace Task2
         }
 
         /// <summary>
-        /// Merge two arrays into a single sorted one.
+        /// Merge two arrays into a single one.
         /// </summary>
         /// <param name="array1">The first array to merge.</param>
         /// <param name="array2">The second array to merge.</param>
