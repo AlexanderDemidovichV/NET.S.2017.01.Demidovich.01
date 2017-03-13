@@ -14,8 +14,10 @@ Task1:
     Для этого нужно выполнить SN.exe дважды: sn.exe –p keypair.keys keypair.PublicKey; sn.exe –tp keypair.PublicKey 
   5. Получение многофайловой сборки с нестрогим именем: 
     csc.exe /t:library /addmodule:cat.netmodule /addmodule:dog.netmodule /out:animal.dll mouse.cs
+    
   5.1 Получение многофайловой сборки со строгим именем: 
     csc.exe /t:library /addmodule:cat.netmodule /addmodule:dog.netmodule /keyfile:keypair.snk /out:animal.dll mouse.cs
+    
   5.2 Помещение сборки со строгим именем в GAC:
     gacutil -i animal.dll
    
