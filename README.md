@@ -1,11 +1,12 @@
 # NET.S.2017.01.Demidovich.01
-Task1:
 
-Задачи
+# Task1:
+
+>Задачи
   1. Cоздать многофайловую сборку
   2. Назначить сборке строе имя и поместить в GAC
   
-Решение
+>Решение
   1. run Developer Command Prompt for VS as administrator
   2. Создание cat.netmodule: csc.exe /t:module cat.cs 
   3. Создание dog.netmodule: csc.exe /t:module dog.cs
@@ -23,7 +24,7 @@ Task1:
     gacutil -i animal.dll
    
   
-Task2: 
+# Task2: 
 
-Задачи
+>Задачи
   1. Реализовать метод сортировки слиянием для целочисленного массива.  Протестировать работу метода в консольном приложении.
