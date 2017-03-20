@@ -13,11 +13,12 @@ namespace Task2_Console
     {
         #region Private Fields
 
-        private static Random random = new Random();
+        private static readonly Random Random = new Random();
 
         #endregion
 
         #region Public Methods
+
 
         static void Main(string[] args)
         {
@@ -98,7 +99,7 @@ namespace Task2_Console
             int[] array = new int[size];
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next(1, 101);
+                array[i] = Random.Next(1, 101);
             }
 
             return array;
