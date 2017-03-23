@@ -29,7 +29,7 @@ namespace Task2
         /// </summary>
         /// <param name="array">The one-dimensional System.Array to sort.</param>
         /// <param name="comparison">The System.Comparison to use when comparing elements.</param>
-        /// <exception cref="System.ArgumentNullException">array is null.-or-comparison is null.</exception>
+        /// <exception cref="System.ArgumentNullException"><paramref name="array"/> is null.-or-<paramref name="comparison"/> is null.</exception>
         private static void MergeSort(int[] array, Comparison<int> comparison)
         {
             if (array == null)
