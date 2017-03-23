@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task2.NUnitTests
+namespace Task2.Tests
 {
     class MergeSorterTests
     {

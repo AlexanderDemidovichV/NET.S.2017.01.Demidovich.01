@@ -7,8 +7,8 @@
     <ProjectGuid>{1FBC2907-9C43-479F-A2C2-C8305FF278D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Task2.NUnitTests</RootNamespace>
-    <AssemblyName>Task2.NUnitTests</AssemblyName>
+    <RootNamespace>Task2.Tests</RootNamespace>
+    <AssemblyName>Task2.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

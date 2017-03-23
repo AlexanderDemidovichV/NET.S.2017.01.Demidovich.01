@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2", "Task2\Task2.csproj", "{406551F7-664F-4154-9EB4-B3400CB5F770}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.NUnitTests", "Task2.NUnitTests\Task2.NUnitTests.csproj", "{1FBC2907-9C43-479F-A2C2-C8305FF278D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.Tests", "Task2.NUnitTests\Task2.Tests.csproj", "{1FBC2907-9C43-479F-A2C2-C8305FF278D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
